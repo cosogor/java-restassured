@@ -1,0 +1,2 @@
+# javarestassured
+javarestassured sample framework
