@@ -14,17 +14,6 @@ Scenario:
         2. Draw cards from the deck 5 times each time draw between 1 and 5 cards at random
         3. Return the first drawn card back to the deck
         4. Verify that the correct number of cards are remaining in the deck
-
-Сценарий: Оставшиеся карты правильно обновляются после розыгрыша
-1. Предположим, что новая колода начинается с 52 карт:
-2. Вытаскивайте карты из колоды 5 раз, каждый раз вытаскивая случайным образом от 1 до 5 карт
-3. Верните первую вытянутую карту обратно в колоду
-Returning cards to the deck:
-http://deckofcardsapi.com/api/deck/<<deck_id>>/return/ copy
-http://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/return/
-http://deckofcardsapi.com/api/deck/<<deck_id>>/return/?cards=AS,2S
-http://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/return/?cards=AS,2S
-4. Убедитесь, что в колоде осталось нужное количество карт
 */
 
 
