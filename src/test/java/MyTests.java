@@ -3,9 +3,14 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static  org.hamcrest.Matchers.*;
 
 import com.sun.org.apache.xpath.internal.operations.NotEquals;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Date;
 /*
 Scenario:
         Scenario: Remaining cards correctly updated after drawing
@@ -17,7 +22,7 @@ Scenario:
 
 
 public class MyTests {
-
+//    String someRandomString = String.format("%1$TH%1$TM%1$TS", new Date());
 
 
     @Test //Smoke test Api check in BDD\Gherkin style
@@ -118,5 +123,29 @@ public class MyTests {
 
         // check remaining cards number after Return card
         Assert.assertEquals(cards_remaining_old + 1, cards_remaining);
+    }
+    @Test //REST API POST request test
+    void test003(){
+        String requestBody = "{\n" +
+                "    \"name\": \"morpheus\",\n" +
+                "    \"job\": \"leader\"\n" +
+                "}";
+        RequestSpecification request = RestAssured.given();
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("name", "morpheus");
+        requestParams.put("job", "leader");
+        String json = requestParams.toString();
+        request.body(requestParams.toString());
+
+        given().
+                when()
+                .header("Content-type", "application/json")
+                .body(json)
+                .post("https://reqres.in/api/users").
+                then().
+                statusCode(201).
+                body("name", equalTo("morpheus")).
+                body("job", equalTo ("leader")).
+                body("id", not (equalTo("246")));
     }
 }

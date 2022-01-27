@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="17514" started-at="2021-12-17T22:43:41 MSK" finished-at="2021-12-17T22:43:59 MSK">
+  <suite name="Default Suite" duration-ms="15050" started-at="2022-01-26T19:39:59 EST" finished-at="2022-01-26T19:40:15 EST">
     <groups>
     </groups>
-    <test name="testngproject" duration-ms="17514" started-at="2021-12-17T22:43:41 MSK" finished-at="2021-12-17T22:43:59 MSK">
+    <test name="java-restassured" duration-ms="15050" started-at="2022-01-26T19:39:59 EST" finished-at="2022-01-26T19:40:15 EST">
       <class name="MyTests">
-        <test-method status="PASS" signature="test001()[pri:0, instance:MyTests@166e5bd]" name="test001" duration-ms="14630" started-at="2021-12-17T22:43:41 MSK" finished-at="2021-12-17T22:43:56 MSK">
+        <test-method status="PASS" signature="test001()[pri:0, instance:MyTests@1057a39]" name="test001" duration-ms="11060" started-at="2022-01-26T19:40:00 EST" finished-at="2022-01-26T19:40:11 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test001 -->
-        <test-method status="PASS" signature="test002()[pri:0, instance:MyTests@166e5bd]" name="test002" duration-ms="2626" started-at="2021-12-17T22:43:56 MSK" finished-at="2021-12-17T22:43:59 MSK">
+        <test-method status="PASS" signature="test002()[pri:0, instance:MyTests@1057a39]" name="test002" duration-ms="2500" started-at="2022-01-26T19:40:11 EST" finished-at="2022-01-26T19:40:13 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test002 -->
+        <test-method status="PASS" signature="test003()[pri:0, instance:MyTests@1057a39]" name="test003" duration-ms="1336" started-at="2022-01-26T19:40:13 EST" finished-at="2022-01-26T19:40:14 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test003 -->
       </class> <!-- MyTests -->
-    </test> <!-- testngproject -->
+    </test> <!-- java-restassured -->
   </suite> <!-- Default Suite -->
 </testng-results>
