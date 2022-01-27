@@ -1,8 +1,5 @@
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static  org.hamcrest.Matchers.*;
-
-import com.sun.org.apache.xpath.internal.operations.NotEquals;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -25,7 +22,9 @@ public class MyTests {
 //    String someRandomString = String.format("%1$TH%1$TM%1$TS", new Date());
 
 
-    @Test //Smoke test Api check in BDD\Gherkin style
+    // @Test (enabled=false)
+    @Test (priority=3)
+    //Smoke test Api check in BDD\Gherkin style
     void test001(){
 
         given().
@@ -39,7 +38,7 @@ public class MyTests {
             body("remaining", equalTo(52));
     }
 
-    @Test //Api check in old school style
+    @Test (priority=2)//Api check in old school style
     void test002(){
         String deck_id = "";
         String first_card = "";
@@ -124,7 +123,8 @@ public class MyTests {
         // check remaining cards number after Return card
         Assert.assertEquals(cards_remaining_old + 1, cards_remaining);
     }
-    @Test //REST API POST request test
+    @Test (priority=1)
+        //REST API POST request test
     void test003(){
         String requestBody = "{\n" +
                 "    \"name\": \"morpheus\",\n" +
